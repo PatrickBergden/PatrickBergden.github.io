@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- [[! Document Settings ]] -->
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <!-- [[! Page Meta ]] -->
+    <title>Schnorr Digitala Signaturer</title>
+    <meta name="description" content="Bergden Finans - Reflektioner kring investering i aktier, råvaror, kryptovalutor och om att njuta av livet i största allmänhet." />
+
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="shortcut icon" href="/assets/images/favicon.ico" >
+
+    <!-- [[! Styles'n'Scripts ]] -->
+    <link rel="stylesheet" type="text/css" href="/assets/css/screen.css" />
+    <link rel="stylesheet" type="text/css"
+          href="//fonts.googleapis.com/css?family=Merriweather:300,700,700italic,300italic|Open+Sans:700,400" />
+    <link rel="stylesheet" type="text/css" href="/assets/css/syntax.css" />
+
+    <!-- [[! Ghost outputs important style and meta data with this tag ]] -->
+        <link rel="canonical" href="/" />
+    <meta name="referrer" content="origin" />
+    <link rel="next" href="/page2/" />
+
+    <meta property="og:site_name" content="Bergden Finans" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Bergden Finans" />
+    <meta property="og:description" content="Reflektioner kring investering i aktier, råvaror, kryptovalutor och om att njuta av livet i största allmänhet." />
+    <meta property="og:url" content="/" />
+    <meta property="og:image" content="/assets/images/cover1.jpg" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Bergden Finans" />
+    <meta name="twitter:description" content="Reflektioner kring investering i aktier, råvaror, kryptovalutor och om att njuta av livet i största allmänhet." />
+    <meta name="twitter:url" content="/" />
+    <meta name="twitter:image:src" content="/assets/images/cover1.jpg" />
+
+    <script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "Website",
+    "publisher": "Finding The Way Home",
+    "url": "/",
+    "image": "/assets/images/cover1.jpg",
+    "description": "Reflektioner kring investering i aktier, råvaror, kryptovalutor och om att njuta av livet i största allmänhet."
+}
+    </script>
+
+    <meta name="generator" content="Jekyll 3.0.0" />
+    <link rel="alternate" type="application/rss+xml" title="Bergden Finans" href="/rss.xml" />
+
+    <!-- Equations using MathJax start -->
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config"> MathJax.Hub.Config({ TeX: { equationNumbers: {autoNumber: "all"} } });</script>
+    <!-- Equations using MathJax stop -->
+
+    <!-- needed? start-->
+    <script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
+});
+</script>
+<script type="text/javascript" async src="path-to-mathjax/MathJax.js?config=TeX-AMS_CHTML"></script>
+<!-- needed? stop-->
+
+</head>
+<body class="post-template nav-closed">
+
+    <div class="nav">
+    <h3 class="nav-title">Meny</h3>
+    <a href="#" class="nav-close">
+        <span class="hidden">Stäng</span>
+    </a>
+    <ul>
+        <li class="nav-home " role="presentation"><a href="/">Home</a></li>
+        <li class="nav-about " role="presentation"><a href="/about">About</a></li>
+        <li class="nav-fables " role="presentation"><a href="/tag/fables">Fables</a></li>
+        <li class="nav-speeches " role="presentation"><a href="/tag/speeches">Speeches</a></li>
+        <li class="nav-fiction " role="presentation"><a href="/tag/fiction">Fiction</a></li>
+        <li class="nav-author " role="presentation"><a href="/author/casper">Author</a></li>
+    </ul>
+    <a class="subscribe-button icon-feed" href="/rss.xml">Prenumerera</a>
+</div>
+<span class="nav-cover"></span>
+
+
+    <div class="site-wrapper">
+
+        <!-- [[! Everything else gets inserted here ]] -->
+        <!-- < default -->
+
+<!-- The comment above "< default" means - insert everything in this file into -->
+    <!-- the [body] of the default.hbs template, which contains our header/footer. -->
+
+<!-- Everything inside the #post tags pulls data from the post -->
+<!-- #post -->
+
+<header class="main-header post-head " style="background-image: url(/assets/images/cover_dig_sig_01.jpg) ">
+    <nav class="main-nav  overlay  clearfix">
+        <a class="blog-logo" href="/"><img src="/assets/images/ghost.png" alt="Blog Logo" /></a>
+        
+            <a class="menu-button icon-menu" href="#"><span class="word">Menu</span></a>
+        
+    </nav>
+</header>
+
+<main class="content" role="main">
+
+    <article class="post tag-fiction">
+
+        <header class="post-header">
+            <h1 class="post-title">Schnorr Digitala Signaturer</h1>
+            <section class="post-meta">
+            <!-- <a href='/'>Patrick Bergden</a> -->
+            <time class="post-date" datetime="2016-02-11">11 Feb 2016</time>
+                <!-- [[tags prefix=" on "]] -->
+                 
+                on 
+                
+                    
+                       <a href='/tag/blockchain'>Blockchain</a>
+                       
+                
+                
+            </section>
+        </header>
+
+        <section class="post-content">
+            
+            <h2>Från bläck och papper...</h2>
+
+<p>Detta Att signera dokument och beslut har människan gjort i hundratals år.
+I bilden ovan signerar Amerikanska Senatorer <strong>The Constitution</strong> vilket
+gav staterna en enad lag.</p>
+
+<p>Varje senator signerade alltså med en penna ett pappersdokument (konstitutionen) - handlingen legitimerade och gav dokumentet juridisk betydelse.</p>
+
+<h3>...till datorer och hemligheter</h3>
+
+<p>Datoriseringen av världen sker med accelererande hastighet.
+Allt fler beslut fattas via email och telefonsamtal.
+Denna värld skapar ett behov av att kunna signera saker digitalt.</p>
+
+<p>Inom, tex kryptovalutor som Bitcoin är det viktigt att veta vem som skickar ett meddelande. Tekniken för att säkerställa detta kallas <a href="https://en.wikipedia.org/wiki/Digital_signature">Digitala Signaturer</a>.
+Bitcoin använder idag en variant av digital signatur som kallas Elliptisk Kurvatur Kryptografi. <a href="www.gp.se">Jag har tidigare skrivit en post och ett program som beskriver hur denna version av digitala signering går till</a>.</p>
+
+<h2>Digitala signaturer</h2>
+
+<p>Ett mycket vanligt behov på Internet är att kunna bekräfta att den part (person, organisation etc) som skickat ett meddelande, faktiskt är den de utger sig för att vara.</p>
+
+<p>Så, signeringens värde ligger främst hos mottagaren av meddelandet och dennes
+behov att kunna bekräfta att meddelandets avsändare är den hon utger sig för att vara.</p>
+
+<p>Denna post är alltså en mindre teknisk post där jag ger mig på att förklara hur digitala signaturer fungerar - och då främst <a href="https://en.wikipedia.org/wiki/Schnorr_signature"><strong>Schnorr Digital Signatur</strong></a>.
+Beskrivningen/definitionen som finns på Wikipediasidan kan nog upplevas
+som <em>helt galet torr!</em>, men där finns i alla fall allt förklarat, med matematisk stringens.</p>
+
+<blockquote>
+<p>I slutet av denna post tänkte jag ge mig på att skapa en påhittad egen minikonstitution, skriva under den och skicka den till två andra parter som gör detsamma.
+Lite som en modern version av bilden på signeringen av The Constitution.</p>
+</blockquote>
+
+<h3>Schnorr Digitala Signaturer</h3>
+
+<p>Det finns flera olika varianter av signatur schema som baseras på <em><a href="www.gp.se">diskreta logaritmer</a></em>
+En huvudsaklig fördel med <em>Schnorr digital signatur</em> är <strong>hastighet</strong>, jämte andra, är att merparten av beräkningen kan göras <strong>innan</strong> man sänder meddedlandet.
+Detta skyndar på processen när man faktiskt vill skicka meddelandet.</p>
+
+<p>Det finns olika versioner av denna algoritm, bland annat den som bygger på elliptiska
+kurvor och <em>finite fields</em> varianten.
+I denna post väljer jag att använda mig av den allmäna versionen.</p>
+
+<p>När kan detta vara av värde?</p>
+
+<blockquote>
+<p>Ja, en jämförelse skulle kunna vara tiden det tar för 10 personer att lägga i ett brev i en brevlåda. Om alla man redan har skrivit adressen och frankerat brevet innan man ställer sig i kön går det väldigt mycket snabbare än om alla skall vänta på att nästa person vid brevlådan skriver adress och slickar på ett frimärke innan de lägger brevet på lådan.</p>
+</blockquote>
+
+<h3>Implementering i programkod</h3>
+
+<p>Teori är super, men personligen har jag svårt att förstå teori om jag inte implementerar
+den i något konkret. I denna post lägger jag efter varje sektion in källkod.</p>
+
+<p>Den koden representerar alltså då teorin implementerad.
+Det kompletta programmet i sin helhet, återfinns i slutet av posten.</p>
+
+<p>Jag har även lagt programmet på min GitHub sida - men kom ihåg att detta bara är <a href="">throw-away-code</a>
+och inte på något sätt tänkt att användas i något skarpt.</p>
+
+<hr>
+
+<h2>Schnorr Algoritmen</h2>
+
+<p>Här nedan går jag igenom hela processen med att signera något med en Schnorr
+digital signatur. För den som inte är superförtjust i Matematik - och då framför allt Modulär Aritmetik och Algebraiska Strukturer - <a href="#cheeryouup">så har jag skrivit några ord som kanske kan motivera lite grann</a><sup>*</sup>.</p>
+
+<h3>Att välja Parametrar</h3>
+
+<p>Alla användare av signatur <a href="www.gp.se">schemat</a> kommer överens om en mängd $G$ med generatorn $g$ av primtalsorder $q$ i vilket det diskret logaritmiska problemet är svårt.</p>
+
+<blockquote>
+<p>All users of the signature scheme agree on a group G with generator g of prime order q in which the discrete log problem is hard.</p>
+</blockquote>
+
+<p>Följande parameterar ingår i <em>Schnorr Digital Signatur</em>:<br>
+$p, q, g, s, v, r, x, y$</p>
+
+<p>Dessa parametrar representerar:</p>
+
+<ul>
+<li>  $p$: ett stort primtal (ofta representerad med ett 1024 bit tal) som är tillgängligt för alla.</li>
+<li>  $q$: en stor <a href="http://www.mathsisfun.com/definitions/factor.html">primtalsfaktor</a> av $p-1$  (ofta representerad med ett 160 bit tal) och som är tillgänglig för alla.</li>
+<li>  $g$: ett heltal med $order\;q\;modulo\;p,\;i\;[1, \cdot\cdot\cdot, p-1]$,<br>(i själva verket en <a href="https://crypto.stanford.edu/pbc/notes/numbertheory/gen.html">generator</a>) som uppfyller $a^q = 1\,mod\,p$</li>
+</ul>
+
+<p>Dessa tre värden, $p,q$ och $g$, kallas tillsammans <strong>publika</strong>. Man kan betrakta dem som en mängd kända värden som användarna av signaturen kommit överens om att använda.</p>
+
+<blockquote>
+<p>In modular arithmetic, a branch of number theory, a number g is a primitive root modulo n if every number a coprime to n is congruent to a power of g modulo n. That is, for every integer a coprime to n, there is an integer k such that gk ≡ a (mod n). Such k is called the index or discrete logarithm of a to the base g modulo n.<br>In other words, g is a generator of the multiplicative group of integers modulo n.</p>
+</blockquote>
+
+<h4>Källkod: Parametrar</h4>
+
+<pre>
+package main
+
+import (
+    "fmt"
+    "math"
+)
+
+// Överenskomna parametrar
+// p: ett primtal
+var p int = 607
+// q: en faktor i p-1
+//var q int = 101
+// g: en generator(funktion)
+var g int = 601
+</pre>
+
+<hr>
+
+<h3>Key generation</h3>
+
+<p>Nu behöver vi ett <a href="https://en.wikipedia.org/wiki/Public-key_cryptography">nyckelpar</a>:</p>
+
+<ul>
+<li><p><strong>Private key, x</strong><br>
+$x$: ett heltal där $0 &lt; x &lt; q$, denna parameter representerar vår <em>privata signeringsnyckel</em> och väljs ur <em>den tillåtna mängden</em><br>$$x\in Z_x^q$$</p></li>
+<li><p><strong>Public key, y</strong><br>
+$y$: är $a^{-s} \,mod \,q$, detta värde är vår <a href="https://en.wikipedia.org/wiki/Public-key_cryptography"><em>publika nyckel</em></a>.<br>
+Vi behöver räkna fram vår <em>public verification key</em>: $$y = g{^x} \; (mod\,p)$$</p></li>
+</ul>
+
+<h4>Viktigt att tänka på</h4>
+
+<p>Vi får inte dela $x$ med någon annan för då kan de signera i vårt namn.
+Den <strong>publika nyckeln</strong> är vad vi delar med oss på Internet. Den gör det möjgligt för andra att <a href="">bekräfta</a> vår signatur.</p>
+
+<h4>Källkod: Key Generation</h4>
+
+<pre>
+// Private Key
+// Välj ett slumptal x, sådant att 0 < x < q
+//var x int = rand.Intn(q)
+var x int = 3
+
+// Public Key
+// Räkna fram en public key sådan att y=g^x (mod p)
+var y, gx int
+gx = int(math.Pow(float64(g), float64(x)))
+y = int(math.Mod(float64(gx), float64(p)))
+</pre>
+
+<hr>
+
+<h3>Signering</h3>
+
+<p>För att signera ett meddelande, $M$, så behöver vi gå igenom följande steg:</p>
+
+<ul>
+<li>  Välja ett slumptal $k$ från den tillåtna mängden, sådant att $$0 &lt; k &lt; q$$</li>
+<li>  Vi använder sedan detta $k$ för att beräkna<br>$$r = g{^k}  \; (mod\,p)$$</li>
+<li>  I nästa steg behöver vi konkatenera (slå ihop) meddelandet som skall signeras, $M$, med vårt beräknade värde, $r$, från steg (4).
+<br>Värdet $r$ behöver vara representerat som en <a href="www.gp.se">bit sträng</a>.<br><br>Konkateringsnotationen, $||$, betyder allstå att vi slår ihop två tal.<br>
+Resultatet av konkateneringen skall slutligen omvandlas till ett heltal med hjälp av <a href="https://sv.wikipedia.org/wiki/Hashfunktion">en envägs kryptografisk hash funktion</a> sådan att
+$H:\{ 0,1 \}^*\rightarrow \mathbb $</li>
+</ul>
+
+<!-- \{0,1\}^*\leftarrow \Bbb_q$ <br> -->
+
+<!-- $$e = H(M\,||\,r)$$ -->
+
+<ul>
+<li>  Det sista steget i signeringen är att beräkna <br>
+$$s = r\, +\, x \cdot e\, (mod\, q)$$<br></li>
+</ul>
+
+<h5>Signaturen</h5>
+
+<p>Vår Schnorr Digitala Signatur är nu paret: $(e,s)$</p>
+
+<h4>Källkod: Signering</h4>
+
+<pre>
+// Välja ett slumptal r, sådant att 0 < r < q
+var r int = rand.Intn(q)
+</pre>
+
+<hr>
+
+<h3>Skicka</h3>
+
+<p>Det vi skickar är två saker:</p>
+
+<ol>
+<li> Meddelandet, $M$</li>
+<li> Signaturen, $(e,y)$, i den ordningen</li>
+</ol>
+
+<p>På detta sätt har mottagaren av meddelandet vad de behöver
+för att <strong>verifiera</strong> signaturens riktighet.</p>
+
+<blockquote>
+<p>Vi försöker alltså inte att dölja meddelandet. Vi vill bara att
+mottagaren skall kunna <em>verifiera</em> att det faktiskt är vi som
+skickat meddelandet, inte någon oärlig tredje part.</p>
+</blockquote>
+
+<h4>Källkod: Skicka</h4>
+
+<pre>
+// p: ett primtal, ofta representerad med ett 1024 bit tal
+var p int64
+</pre>
+
+<hr>
+
+<h3>Verifiering</h3>
+
+<p>Säg nu att jag signerat <em>ett meddelande</em>, $M$, och skickat detta tillsammans med <em>min signatur</em>, $(e,y)$, till ämnad mottagare.</p>
+
+<p>I nästa steg vill i så fall mottagaren, efter att denne mottagit meddelande, <strong>verifiera</strong> att meddelandet faktiskt kommer från mig.
+Tills sin hjälp i verifieringsprocessen har mottagaren alltså:</p>
+
+<ul>
+<li>  De mottagna meddelandet, $M$</li>
+<li>  Avsändarens signatur, $e, y$</li>
+<li>  De publika värdena: $p,q,a$</li>
+<li>  Min publika nyckel: $v$</li>
+</ul>
+
+<p>Det första mottagaren behöver beräkna är:
+$$x&#39; = a{^y}v{^e}\,mod\,p$$</p>
+
+<p>Vi kan förenkla uttrycket. Först genom att byta ut $v$, vår publika nyckel, mot $a{^-s}$ från parameterlistan.</p>
+
+<p>$$x&#39; = a{^y}v{^e} = a{^y}a{^-se}$$</p>
+
+<p>Med enkla                               algebraiska regler kan vi samla exponenterna...</p>
+
+<p>$$x´ = a{^y-se} = a{^r} = x\, mod\, p$$</p>
+
+<p>Kom ihåg att $x$ var det värde vi slog ihop, eller konkatenerade, med meddelandet
+och slutligen Hash:ade, i steg (4).</p>
+
+<h4>Källkod: Verifiering</h4>
+
+<pre>
+// p: ett primtal, ofta representerad med ett 1024 bit tal
+var p int64
+</pre>
+
+<hr>
+
+<p>Det händer väldigt mycket på den här sidan av kryptografi, mycket på grund av
+det stora intresset för kryptovalutor som <strong>Bitcoin</strong>.</p>
+
+<p>I hjärtat av dessa kryptovalutor hittar vi idéen om en digital signatur.
+Enkelt uttryckt - för att godkänna att något viktigt genomförs - som att flytta
+alla mina Bitcoins från mitt koonto över till ditt konto - så kan jag kräva att
+min digitala signatur &#39;signerar&#39;/godkänner denna process.</p>
+
+<p>Den historiska bilden ovan visar händelsen när man i USA signerarade
+<strong>The Constitutionen</strong>  - en mycket viktig händelse i USA&#39;s historia.</p>
+
+<p>Just på grund av att detta var så viktigt så kan man förstå att politikernas
+signaturer krävdes för att legitimera processen med att göra Constitution
+allmängiltlig.</p>
+
+<p>I dagsläget lever vi i en digital Internet-orienterad värld. En signatur måste
+klara av en mängd olika typer av bedrägerier för att parterna i en process skall
+våga lita på att rätt person givit sitt godkännande för att en process genomförs.</p>
+
+<hr>
+
+<p><a name="cheeryouup"></a><p></p><br></p>
+
+<h3>Några ord om matematik och formalism:</h3>
+
+<p>Jag har aldrig varit bra på matematik. Tvärtom - jag är en väldigt visuell person som alltid fått kämpa med skolans, i mitt tycke, torra oinspirerande sätt att lära
+ut teoretiska ämnen.Om jag skall förstå något vill jag gärna börja med ett helhetsperspektiv och bilder - något som upprättar en känsla av att <em>det jag lär mig spelar roll i det mänskliga äventyret</em>.</p>
+
+<p>Matematikundervisningen kan man tycka vad man vill om - jag tycker den är ofattbart primitiv - men om man haft en oinspirerande och onödigt invecklad introduktion av högre matematik (alltså allt ovan enklare funktioner och grundläggande algebra) så vill jag ge rådet: <em>Håll ut! Ge inte upp!</em></p>
+
+<p>För mig är matematik som en ofattbart vass kniv. Ett instrument som skär rakt
+ingenom människans närmast spontana behov av att svänga sig med ogentligheter och extremt ogrundade resonemang och representationer -  allt i ett försök att hantera vår komplexa värld (läs gärna <a href="">Nicholas Taleb&#39;s utmärka bok Black Swan</a> för mer om detta).</p>
+
+<p>Med matematik kan vi ta oss fram och utforska denna extremt komplicerade värld, och faktiskt göra riktiga framsteg, värdefulla betraktelser som nästa generation kan nyttja och jobba vidare på.</p>
+
+<p>Så ge inte upp, lär dig ett matematiskt verktyg i taget - ha alltid ett helikopterperspektiv av det Matematiska landskapet när du lär dig nya saker och
+kom ihåg att Matematiken hjälper oss människor att &quot;come to grips&quot; med vår hysteriskt komplicerade värld. Sorry for the rant.</p>
+
+
+        </section>
+
+        <footer class="post-footer">
+
+            <!-- Everything inside the #author tags pulls data from the author -->
+            <!-- #author-->
+
+            
+            <figure class="author-image">
+                <a class="img" href="/author/Esper" style="background-image: url(/assets/images/pk.jpg)"><span class="hidden">'s Picture</span></a>
+            </figure>
+            
+
+            <section class="author">
+                <h4><a href="/author/Esper">Patrick Bergden</a></h4>
+                
+                
+                    <p> Intreserad av allt som har med trading, programmering, kryptovalutor och blockchain att göra.</p>
+                
+                <div class="author-meta">
+                    <span class="author-location icon-location"> Gothenburg, Sweden</span> 
+                    <span class="author-link icon-link"><a href="http://github.com/patrickbergden/"> github.com/patrickbergden/</a></span> 
+                </div>
+            </section>
+
+            <!-- /author  -->
+
+            <section class="share">
+                <h4>Share this post</h4>
+                <a class="icon-twitter" href="http://twitter.com/share?text=Schnorr Digitala Signaturer&amp;url=http://github.com/patrickbergden/schnorr-signaturer-decred"
+                    onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+                    <span class="hidden">Twitter</span>
+                </a>
+                <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=http://github.com/patrickbergden/schnorr-signaturer-decred"
+                    onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+                    <span class="hidden">Facebook</span>
+                </a>
+                <a class="icon-google-plus" href="https://plus.google.com/share?url=http://github.com/patrickbergden/schnorr-signaturer-decred"
+                   onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+                    <span class="hidden">Google+</span>
+                </a>
+            </section>
+            
+            <!-- Add Disqus Comments -->
+            
+            
+        </footer>
+
+    </article>
+
+</main>
+
+<aside class="read-next">
+
+    <!-- [[! next_post ]] -->
+    
+        <a class="read-next-story " style="background-image: url(/assets/images/cover_noclass.jpg)" href="/transition-to-go">
+            <section class="post">
+                <h2>Programspråket Go <br>har ingen class</h2>
+                <p>Jag har använt objektorienterad programmering i över 20 år (jag började med Java 1.1, 1996)....</p>
+            </section>
+        </a>
+    
+    <!-- [[! /next_post ]] -->
+    <!-- [[! prev_post ]] -->
+    
+        <a class="read-next-story prev " style="background-image: url(/assets/images/cover_dig_sig_01.jpg)" href="/private-blockchains-multichain">
+            <section class="post">
+                <h2>Privata Blockkedjor<br>&mdash; med MultiChain</h2>
+                <p>Can it get any easier than this?: Download Multichain In the terminal: multichain-util create myAwesomeBlockchain...</p>
+            </section>
+        </a>
+    
+    <!-- [[! /prev_post ]] -->
+</aside>
+
+<!-- /post -->
+
+
+        <footer class="site-footer clearfix">
+          <section class="copyright"><a href="/">Bergden Finans</a> &copy; 2016</section>
+          <section class="poweredby">Inget på denna blogg är investeringsråd.</section>
+        </footer>
+    </div>
+    <!-- [[! Ghost outputs important scripts and data with this tag ]] -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <!-- [[! The main JavaScript file for Casper ]] -->
+    <script type="text/javascript" src="/assets/js/jquery.fitvids.js"></script>
+    <script type="text/javascript" src="/assets/js/index.js"></script>
+
+    <!-- Add Google Analytics  -->
+        <!-- Google Analytics Tracking code -->
+     <script>
+	    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	    ga('create', '', 'auto');
+	    ga('send', 'pageview');
+
+     </script>
+</body>
+</html>
